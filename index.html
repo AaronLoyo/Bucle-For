@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            padding: 40px;
+            background-color: darkgreen;
+            border-bottom: solid 25px green;
+        }
+        p {
+            color: azure;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        h1 {
+            color: azure;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+        }
+        header p:hover {
+            color: greenyellow;
+            cursor: pointer;
+        }
+        .productos {
+            background-color: forestgreen;
+            display: grid;
+            margin-top: 180px;
+            padding: 20px;
+            border-radius: 30px;
+        }
+        .producto {
+            border: solid 5px white;
+            display: flex;
+            border-radius: 20px;
+            margin: 5px;
+        }
+        .producto p {
+            margin-left: 8px;
+        }
+        .ProductosComprados {
+            background-color: rgb(3, 44, 10);
+            border: solid 5px green;
+            display: flex;
+            border-radius: 20px;
+            justify-content: center;
+            align-self: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>Products</p>
+        <p>Information</p>
+        <p>Comunity</p>
+        <p>Info</p>
+        <p>More</p>
+    </header>
+    <div class="productos">
+        <div class="producto">
+            <img id="laptop" src="https://i.ibb.co/6Nt5M1x/laptop.png" alt="laptop" width="200" height="200">
+            <p>Laptop portatil de marca "N/A". perfecta para viajes <br> Precio: 200$</p> 
+            <button onclick="AgregarProductoLista(1)">Comprar Ahora</button>
+        </div>
+        <div class="producto">
+            <img id="Bicicleta" src="https://i.ibb.co/dJbvbrH/Bicicleta.png" alt="Bicicleta" alt="laptop" width="200" height="200">
+            <p>Bicicleta roja con ruedas 100% ecologicas <br> Precio: 50$</p>
+            <button onclick="AgregarProductoLista(2)">Comprar Ahora</button>
+        </div>
+        <div class="producto">
+            <img id="lampara" src="https://i.ibb.co/N3kZ6qj/lampara.png" alt="lampara" width="200" height="200">
+            <p>Lampara elegante<br> Precio: 20$</p>
+            <button onclick="AgregarProductoLista(3)">Comprar Ahora</button>
+        </div>
+        <div id="Ventilador" class="producto">
+            <img src="https://i.ibb.co/9V7tfxc/Ventilador.png" alt="Ventilador" width="200" height="200">
+            <p>Lampara elegante<br> Precio: 15$</p>
+            <button onclick="AgregarProductoLista(4)">Comprar Ahora</button>
+        </div>
+    </div>
+    <div class="ProductosComprados">
+        <h1>Productos Comprados</h1>
+        <button onclick="Recarga()">Recargar la lista</button>
+        <p id="Producto1">Producto 1:</p>
+        <p id="Producto2">Producto 2:</p>
+        <p id="Producto3">Producto 3:</p>
+        <p id="Producto4">Producto 4:</p>
+        <p id="Total">Total: 0$</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
